@@ -1,6 +1,4 @@
-﻿using ArmedBooks.BBL.Services;
-
-namespace ArmedBooks.Web.Services;
+﻿namespace ArmedBooks.Web.Services;
 
 public class ImageService : IImageService
 {

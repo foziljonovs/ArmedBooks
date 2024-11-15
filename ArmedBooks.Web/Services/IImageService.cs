@@ -1,4 +1,4 @@
-﻿namespace ArmedBooks.BBL.Services;
+﻿namespace ArmedBooks.Web.Services;
 
 public interface IImageService
 {

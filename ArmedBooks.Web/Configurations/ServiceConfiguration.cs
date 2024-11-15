@@ -1,4 +1,6 @@
-﻿using ArmedBooks.DAL.Data.Contexts;
+﻿using ArmedBooks.BBL.Services;
+using ArmedBooks.DAL.Data.Contexts;
+using ArmedBooks.Web.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace ArmedBooks.Web.Configurations;
@@ -13,6 +15,15 @@ public static class ServiceConfiguration
 
         services.AddDbContext<AppDbContext>(options
             => options.UseNpgsql(connectionString));
+
+        return services;
+    }
+
+    public static IServiceCollection AddServices(
+        this IServiceCollection services)
+    {
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<IImageService, ImageService>();
 
         return services;
     }
