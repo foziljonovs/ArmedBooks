@@ -22,4 +22,5 @@ public class Product
     public DateTime UpdatedAt { get; set; }
     public int? Count { get; set; }
     public Status Status { get; set; }
+    public string ImagePath { get; set; }
 }

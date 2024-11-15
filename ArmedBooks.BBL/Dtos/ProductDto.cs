@@ -9,7 +9,7 @@ public class ProductDto
     public string? About { get; set; }
     public int Price { get; set; }
     public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
     public int? Count { get; set; }
     public Status Status { get; set; }
+    public string ImagePath { get; set; }
 }
