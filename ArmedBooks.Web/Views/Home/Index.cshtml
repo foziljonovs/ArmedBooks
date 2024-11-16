@@ -1,13 +1,17 @@
-﻿@{
+﻿@using ArmedBooks.BBL.Dtos
+@model IEnumerable<ProductDto>
+
+@{
     ViewData["Title"] = "Asosiy";
     Layout = "_Layout";
 }
+
 <!-- Banner Starts Here -->
 <div class="banner header-text">
     <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
             <div class="text-content">
-                <h2>Har bir mahsulot qattiq sifat nazoratidan o'tadi</h2> 
+                <h2>Har bir mahsulot qattiq sifat nazoratidan o'tadi</h2>
             </div>
         </div>
         <div class="banner-item-02">
@@ -30,117 +34,29 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>Mahsulotlar</h2>
-                    <a href="products.html">barcha mahsulotlarni ko'rish <i class="fa fa-angle-right"></i></a>
+                    <a asp-action="Products" asp-controller="Home" asp-area="">Barcha mahsulotlarni ko'rish <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_01.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$25.75</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (24)</span>
+            @foreach (var product in Model)
+            {
+                <div class="col-md-4">
+                    <div class="product-item">
+                            <a href="#"><img src="@Url.Content("~/" + @product.ImagePath)" alt="@product.Brand"></a>
+                        <div class="down-content">
+                            <a href="@Url.Action("Details", "Home", new { id = product.Id })"><h4>@product.Brand</h4></a>
+                            <h6>@product.Price.ToString()</h6>
+                            <p>@product.About</p>
+                            <ul class="stars">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_02.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$30.25</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (21)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_03.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$20.45</h6>
-                        <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (36)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_04.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$15.25</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (48)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_05.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$12.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (16)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="~/images/product_06.jpg" alt=""></a>
-                    <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$22.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (32)</span>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
@@ -156,7 +72,7 @@
             <div class="col-md-6">
                 <div class="left-content">
                     <h4>Eng yaxshi mahsulotlarni qidiryapsizmi?</h4>
-                    <p>ARMEDBOOKS 2019-yildan buyon faoliyat yurituvchi MDHda harbiy-sanoat noutbuklarining yetakchi yetkazib beruvchisi hisoblanadi</p>
+                    <p>ARMEDBOOKS 2019-yildan buyon faoliyat yurituvchi MDHda harbiy-sanoat noutbuklarining yetakchi yetkazib beruvchisi hisoblanadi.</p>
                     <ul class="featured-list">
                         <li><a href="#">Harbiy, sanoat va korporativ mijozlar uchun maxsus yechimlar</a></li>
                         <li><a href="#">Ishonchli va bardoshli kompyuter uskunalari</a></li>
@@ -169,13 +85,12 @@
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="~/images/feature-image.jpg" alt="">
+                    <img src="~/images/feature-image.jpg" alt="ARMEDBOOKS">
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="call-to-action">
     <div class="container">
@@ -196,4 +111,3 @@
         </div>
     </div>
 </div>
-

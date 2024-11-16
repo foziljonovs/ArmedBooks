@@ -17,7 +17,7 @@ public class Product
     [MaxLength(512)]
     public string? About { get; set; }
     [Required]
-    public int Price { get; set; }
+    public double Price { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public int? Count { get; set; }

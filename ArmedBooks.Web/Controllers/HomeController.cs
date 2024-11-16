@@ -1,3 +1,4 @@
+using ArmedBooks.BBL.Dtos;
 using ArmedBooks.BBL.Services;
 using ArmedBooks.Web.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -13,18 +14,73 @@ namespace ArmedBooks.Web.Controllers
         private readonly IProductService _productService = productService;
         private readonly IImageService _imageService = imageService;
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            try
+            {
+                var products = await _productService.GetAllAsync();
+                return View(products);
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+        }
+        [HttpGet("admin/create")]
+        public IActionResult Create()
+            => View();
+
+        [HttpPost("admin/create")]
+        public async Task<IActionResult> Create(CreateProductDto dto, IFormFile file)
+        {
+            try
+            {
+                if(file != null && file.Length > 0)
+                {
+                    var imageFilePath = await _imageService.SaveImageAsync(file);
+                    dto.ImagePath = imageFilePath;
+                }
+
+                await _productService.AddAsync(dto);
+
+                return RedirectToAction("Products", "Home");
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Error", "Home");
+            }
         }
 
-        public IActionResult Products()
-            => View();
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var product = await _productService.GetByIdAsync(id);
+
+            if(product == null)
+                return RedirectToAction("Error", "Home");
+
+            return View(product);
+        }
+
+        public async Task<IActionResult> Products()
+        {
+            try
+            {
+                var products = await _productService.GetAllAsync();
+                return View(products);
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+        }
 
         public IActionResult Contact()
             => View();
 
         public IActionResult About()
+            => View();
+
+        public IActionResult Error()
             => View();
     }
 }

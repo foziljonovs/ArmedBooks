@@ -1,0 +1,52 @@
+﻿@model ArmedBooks.BBL.Dtos.CreateProductDto
+
+@{
+    ViewData["Title"] = "Create Product";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Create New Product</h2>
+    <form asp-action="Create" asp-controller="Home" method="post" enctype="multipart/form-data">
+        <!-- Brand input -->
+        <div class="form-group mb-3">
+            <label for="Brand" class="form-label">Brand</label>
+            <input asp-for="Brand" class="form-control" id="Brand" placeholder="Enter product brand" />
+            <span asp-validation-for="Brand" class="text-danger"></span>
+        </div>
+
+        <!-- About input -->
+        <div class="form-group mb-3">
+            <label for="About" class="form-label">About</label>
+            <textarea asp-for="About" class="form-control" id="About" rows="4" placeholder="Enter product details"></textarea>
+            <span asp-validation-for="About" class="text-danger"></span>
+        </div>
+
+        <!-- Price input -->
+        <div class="form-group mb-3">
+            <label for="Price" class="form-label">Price</label>
+            <input asp-for="Price" type="number" class="form-control" id="Price" placeholder="Enter product price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <!-- Count input -->
+        <div class="form-group mb-3">
+            <label for="Count" class="form-label">Count</label>
+            <input asp-for="Count" type="number" class="form-control" id="Count" placeholder="Enter product quantity" />
+            <span asp-validation-for="Count" class="text-danger"></span>
+        </div>
+
+        <!-- Image File input -->
+        <div class="form-group mb-3">
+            <label for="ImageFile" class="form-label">Product Image</label>
+            <input type="file" name="file" id="ImageFile" class="form-control" />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary">Create Product</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
