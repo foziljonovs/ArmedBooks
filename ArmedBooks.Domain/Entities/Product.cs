@@ -1,10 +1,5 @@
 ﻿using ArmedBooks.Domain.Enums;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArmedBooks.Domain.Entities;
 
@@ -22,5 +17,8 @@ public class Product
     public DateTime UpdatedAt { get; set; }
     public int? Count { get; set; }
     public Status Status { get; set; }
-    public string ImagePath { get; set; }
+    public Category Category { get; set; }
+    public Guid CategoryId { get; set; }
+    [Required]
+    public string[] ImagePath { get; set; }
 }

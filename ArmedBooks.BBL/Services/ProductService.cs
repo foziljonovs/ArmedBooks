@@ -19,7 +19,7 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 Brand = productDto.Brand,
                 About = productDto.About,
                 Price = productDto.Price,
-                ImagePath = productDto.ImagePath,
+                //ImagePath = productDto.ImagePath,
                 Count = productDto.Count,
                 CreatedAt = DateTime.UtcNow.AddHours(5),
                 Status = Domain.Enums.Status.Active
@@ -76,7 +76,7 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 CreatedAt = product.CreatedAt,
                 Count = product.Count,
                 Status = Status.Active,
-                ImagePath = product.ImagePath
+                //ImagePath = product.ImagePath
             });
 
             return results;
@@ -105,7 +105,7 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 CreatedAt = product.CreatedAt,
                 Count = product.Count,
                 Status = Status.Active,
-                ImagePath = product.ImagePath
+                //ImagePath = product.ImagePath
             };
 
             return result;
@@ -129,7 +129,7 @@ public class ProductService(AppDbContext dbContext) : IProductService
             product.About = productDto.About;
             product.Price = productDto.Price;
             product.Count = productDto.Count;
-            product.ImagePath = productDto.ImagePath;
+            //product.ImagePath = productDto.ImagePath;
             product.UpdatedAt = DateTime.UtcNow.AddHours(5);
 
             await _dbContext.SaveChangesAsync();
@@ -143,7 +143,7 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 Status = product.Status,
                 CreatedAt = product.CreatedAt,
                 Count = product.Count,
-                ImagePath = product.ImagePath
+                //ImagePath = product.ImagePath
             };
 
             return updatedProductDto;
