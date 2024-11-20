@@ -58,7 +58,7 @@
 
     <div class="detail-container">
         <div class="detail-image-container">
-            <img src="@Url.Content("~/" + Model.ImagePath)" alt="@Model.Brand">
+            <img src="@Url.Content("~/" + Model.ImagePaths?.FirstOrDefault())" alt="@Model.Brand">
         </div>
         <div class="detail-content">
             <h2 class="detail-brand">@Model.Brand</h2>

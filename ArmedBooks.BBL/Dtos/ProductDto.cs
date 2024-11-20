@@ -11,5 +11,5 @@ public class ProductDto
     public DateTime CreatedAt { get; set; }
     public int? Count { get; set; }
     public Status Status { get; set; }
-    public string ImagePath { get; set; }
+    public List<string> ImagePaths { get; set; }
 }

@@ -31,14 +31,14 @@ namespace ArmedBooks.Web.Controllers
             => View();
 
         [HttpPost("admin/create")]
-        public async Task<IActionResult> Create(CreateProductDto dto, IFormFile file)
+        public async Task<IActionResult> Create(CreateProductDto dto, List<IFormFile> files)
         {
             try
             {
-                if(file != null && file.Length > 0)
+                if(files != null && files.Any())
                 {
-                    var imageFilePath = await _imageService.SaveImageAsync(file);
-                    dto.ImagePath = imageFilePath;
+                    var imageFilePath = await _imageService.SaveImageAsync(files);
+                    dto.Images = imageFilePath;
                 }
 
                 await _productService.AddAsync(dto);

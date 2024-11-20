@@ -2,5 +2,5 @@
 
 public interface IImageService
 {
-    Task<string> SaveImageAsync(IFormFile imageFile);
+    Task<List<string>> SaveImageAsync(IEnumerable<IFormFile> imageFiles);
 }

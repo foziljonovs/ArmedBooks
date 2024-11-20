@@ -20,5 +20,5 @@ public class Product
     public Category Category { get; set; }
     public Guid CategoryId { get; set; }
     [Required]
-    public string[] ImagePath { get; set; }
+    public List<string> ImagePath { get; set; } = new List<string>();
 }

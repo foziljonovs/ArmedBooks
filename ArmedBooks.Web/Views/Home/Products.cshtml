@@ -20,34 +20,44 @@
 </div>
 
 
-<div class="latest-products">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading">
-                    <h2>Mahsulotlar</h2>
-                </div>
+div class="products">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="filters">
+                <ul>
+                    <li class="active" data-filter="*">Barcha mahsulotlar</li>
+                    <li class="active" data-filter="*">Noutbuklar</li>
+                    <li class="active" data-filter="*">Personal kompyuterlar</li>
+                    <li class="active" data-filter="*">Extiyot qismlar</li>
+                </ul>
             </div>
-            @foreach (var product in Model)
-            {
-                <div class="col-md-4">
-                    <div class="product-item">
-                            <a href="#"><img src="@Url.Content("~/" + @product.ImagePath)" alt="@product.Brand"></a>
-                        <div class="down-content">
-                            <a href="#"><h4>@product.Brand</h4></a>
-                            <h6>@product.Price.ToString()</h6>
-                            <p>@product.About</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
+        </div>
+        @foreach(var item in Model)
+        {
+            <div class="col-md-12">
+                <div class="filters-content">
+                    <div class="row grid">
+                        <div class="col-lg-4 col-md-4 all des">
+                            <div class="product-item">
+                                <a href="product.html"><img src="@item.ImagePaths?.FirstOrDefault()" alt="@item.Brand"></a>
+                                <div class="down-content">
+                                    <a href="#"><h4>@item.Brand</h4></a>
+                                    <h6>@item.Price.ToString("C")</h6>
+                                    <p>@item.About</p>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            }
-        </div>
+            </div>
+        }
     </div>
 </div>

@@ -9,19 +9,29 @@ public class ImageService : IImageService
         if(!Directory.Exists(_imageDirectory))
             Directory.CreateDirectory(_imageDirectory);
     }
-    public async Task<string> SaveImageAsync(IFormFile imageFile)
+    public async Task<List<string>> SaveImageAsync(IEnumerable<IFormFile> imageFiles)
     {
-        if(imageFile == null || imageFile.Length == 0)
-            throw new ArgumentNullException("Image file is not valid.");
+        if(imageFiles == null || !imageFiles.Any())
+            throw new ArgumentNullException("Image files is not valid.");
 
-        var fileName = Guid.NewGuid() + Path.GetExtension(imageFile.FileName);
-        var filePath = Path.Combine(_imageDirectory, fileName);
+        if (imageFiles.Count() > 4)
+            throw new ArgumentException("Cannot upload more tha 4 images.");
 
-        using(var stream = new FileStream(filePath, FileMode.Create))
+        var savedPaths = new List<string>();
+
+        foreach(var imageFile in imageFiles)
         {
-            await imageFile.CopyToAsync(stream);
+            var fileName = Guid.NewGuid() + Path.GetExtension(imageFile.FileName);
+            var filePath = Path.Combine(_imageDirectory, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+
+            savedPaths.Add(Path.Combine("images", fileName));
         }
 
-        return Path.Combine("images", fileName);
+        return savedPaths;
     }
 }
