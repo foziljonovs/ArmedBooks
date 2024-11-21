@@ -64,9 +64,6 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 .Where(x => x.Status == Status.Active)
                 .ToListAsync();
 
-            if (!products.Any())
-                throw new Exception("An error occured while getting products.");
-
             var results = products.Select(product => new ProductDto
             {
                 Id = product.Id,

@@ -1,71 +1,44 @@
 ﻿@model ArmedBooks.BBL.Dtos.ProductDto
+@{
+    ViewData["Title"] = "Mahsulot";
+    Layout = "_Layout";
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<div class="products">
+    <div class="container">
+        <div class="row">
+            <!-- Описание товара -->
+            <section id="product-detail">
+                <div class="container">
+                    <div class="product-detail">
+                        <!-- Изображение товара -->
+                        <div class="product-images">
+                            <img src="@Model.ImagePaths.FirstOrDefault()" alt="@Model.Brand + asosiy rasm" class="main-image">
+                            <div class="thumbnails">
+                                @foreach(var imagePath in Model.ImagePaths.Skip(1))
+                                {
+                                    <img src="@imagePath" alt="Qo'shimcha rasm" class="thumbnail">
+                                }
+                            </div>
+                        </div>
 
-        body {
-            background-color: #f9f9f9;
-        }
+                        <!-- Информация о товаре -->
+                        <div class="product-info">
+                            <h2>@Model.Brand</h2>
+                            <p class="product-category">Noutbuk</p>
+                            <p class="product-description">
+                                @Model.About
+                            </p>
+                            <p class="price">Narxi: $<span>@Model.Price.ToString()</span></p>
 
-        .detail-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .detail-image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .detail-content {
-            margin-top: 20px;
-        }
-
-        .detail-brand {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .detail-price {
-            font-size: 20px;
-            color: #4caf50;
-            margin: 10px 0;
-        }
-
-        .detail-about h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .detail-about p {
-            color: #666;
-            line-height: 1.6;
-        }
-    </style>
-
-    <div class="detail-container">
-        <div class="detail-image-container">
-            <img src="@Url.Content("~/" + Model.ImagePaths?.FirstOrDefault())" alt="@Model.Brand">
-        </div>
-        <div class="detail-content">
-            <h2 class="detail-brand">@Model.Brand</h2>
-            <p class="detail-price">$@Model.Price</p>
-            <div class="detail-about">
-                <h3>Mahsulot haqida</h3>
-                <p>@Model.About</p>
-            </div>
+                            <div class="product-actions">
+                                <button class="btn add-to-cart">Savatga qo'shish</button>
+                                <button class="btn buy-now">Sotib olish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+</div>

@@ -23,6 +23,7 @@ namespace ArmedBooks.Web.Controllers
             }
             catch(Exception ex)
             {
+                _logger.LogError(ex, "Mahsulotlarni chiqarishda hatolik yuz berdi.");
                 return RedirectToAction("Error", "Home");
             }
         }
@@ -35,7 +36,7 @@ namespace ArmedBooks.Web.Controllers
         {
             try
             {
-                if(files != null && files.Any())
+                if (files != null && files.Any())
                 {
                     var imageFilePath = await _imageService.SaveImageAsync(files);
                     dto.Images = imageFilePath;
@@ -47,9 +48,11 @@ namespace ArmedBooks.Web.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Mahsulot yaratishda xato yuz berdi.");
                 return RedirectToAction("Error", "Home");
             }
         }
+
 
         public async Task<IActionResult> Details(Guid id)
         {
