@@ -6,7 +6,6 @@
     Layout = "_Layout";
 }
 
-<!-- Page Content -->
 <div class="page-heading products-heading header-text">
     <div class="container">
         <div class="row">
@@ -26,6 +25,7 @@
             <div class="col-md-12">
                 <div class="filters">
                     <ul>
+                        <li><a asp-action="Products" asp-controller="Home" asp-route-id="">Barcha mahsulotlar</a></li>
                         <li><a asp-action="Products" asp-controller="Home" asp-route-id="3a9e6679-7425-41de-911b-e07fc1f90ae4">Getac</a></li>
                         <li><a asp-action="Products" asp-controller="Home" asp-route-id="6c1e6679-7425-41de-933b-e07fc1f90ae2">Panasonic</a></li>
                         <li><a asp-action="Products" asp-controller="Home" asp-route-id="7c1e6679-7425-41de-944b-e07fc1f90ae1">Dell</a></li>
@@ -41,28 +41,22 @@
             }
             else
             {
-                @foreach(var item in Model)
+                @foreach (var product in Model)
                 {
-                    <div class="col-md-12">
-                        <div class="filters-content">
-                            <div class="row grid">
-                                <div class="col-lg-4 col-md-4 all des">
-                                    <div class="product-item">
-                                        <a href="product.html"><img src="@item.ImagePaths?.FirstOrDefault()" alt="@item.Brand"></a>
-                                        <div class="down-content">
-                                            <a href="#"><h4>@item.Brand</h4></a>
-                                            <h6>@item.Price.ToString("C")</h6>
-                                            <p>@item.About</p>
-                                            <ul class="stars">
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <a href="#"><img src="@Url.Content("~/" + @product.ImagePaths?.FirstOrDefault())" alt="@product.Brand"></a>
+                            <div class="down-content">
+                                <a href="@Url.Action("Details", "Home", new { id = product.Id })"><h4>@product.Brand</h4></a>
+                                <h6>@product.Price.ToString()</h6>
+                                <p>@product.About</p>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
