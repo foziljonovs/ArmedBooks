@@ -24,6 +24,7 @@ public static class ServiceConfiguration
     {
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IImageService, ImageService>();
+        services.AddScoped<ICategoryService, CategoryService>();
 
         return services;
     }

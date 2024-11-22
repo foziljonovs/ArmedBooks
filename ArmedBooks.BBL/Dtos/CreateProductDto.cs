@@ -17,5 +17,7 @@ public class CreateProductDto
 
     [Range(1, int.MaxValue, ErrorMessage = "Count must be greater than 0.")]
     public int Count { get; set; }
+    [Required]
+    public Guid CategoryId { get; set; }
     public List<string> Images { get; set; }
 }

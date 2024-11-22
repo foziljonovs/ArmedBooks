@@ -4,45 +4,53 @@
     ViewData["Title"] = "Create Product";
     Layout = "_Layout";
 }
+<div class="col-md-12">
+    <section id="add-product">
+        <div class="container">
+            <h2>Yangi maxsulot qo'shish</h2>
+            <form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="Brand">Maxsulot nomi</label>
+                    <input type="text" asp-for="Brand" class="form-control" placeholder="Maxsulot nomini kiriting" />
+                    <span asp-validation-for="Brand" class="text-danger"></span>
+                </div>
 
-<section id="add-product">
-    <div class="container">
-        <h2>Yangi maxsulot qo'shish</h2>
-        <form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="Brand">Maxsulot nomi</label>
-                <input type="text" asp-for="Brand" class="form-control" placeholder="Maxsulot nomini kiriting" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label for="About">Maxsulot haqida ma'lumot</label>
+                    <textarea asp-for="About" class="form-control" placeholder="Maxsulot haqida ma'lumot kiriting"></textarea>
+                    <span asp-validation-for="About" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label for="About">Maxsulot haqida ma'lumot</label>
-                <textarea asp-for="About" class="form-control" placeholder="Maxsulot haqida ma'lumot kiriting"></textarea>
-                <span asp-validation-for="About" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label for="Price">Maxsulot narxi $</label>
+                    <input type="number" asp-for="Price" class="form-control" placeholder="Maxsulot narxini kiriting" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label for="Price">Maxsulot narxi $</label>
-                <input type="number" asp-for="Price" class="form-control" placeholder="Maxsulot narxini kiriting" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label for="Count">Maxsulot soni</label>
+                    <input type="number" asp-for="Count" class="form-control" placeholder="Maxsulot sonini kiriting" />
+                    <span asp-validation-for="Count" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label for="Count">Maxsulot soni</label>
-                <input type="number" asp-for="Count" class="form-control" placeholder="Maxsulot sonini kiriting" />
-                <span asp-validation-for="Count" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label for="CategoryId">Kategoriya</label>
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-control">
+                        <option value="">-- Select Category --</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="Images">Maxsulot suratlari</label>
-                <input type="file" id="Images" name="files" class="form-control" accept="image/*" multiple />
-                <span asp-validation-for="Images" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label for="Images">Maxsulot suratlari</label>
+                    <input type="file" id="Images" name="files" class="form-control" accept="image/*" multiple />
+                    <span asp-validation-for="Images" class="text-danger"></span>
+                </div>
 
-            <button type="submit" class="btn btn-primary">Maxsulotni qo'shish</button>
-        </form>
-    </div>
-</section>
+                <button type="submit" class="btn btn-primary">Maxsulotni qo'shish</button>
+            </form>
+        </div>
+    </section>
+</div>
 
 @section Scripts {
     @{

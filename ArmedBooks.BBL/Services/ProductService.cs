@@ -22,7 +22,8 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 ImagePath = productDto.Images,
                 Count = productDto.Count,
                 CreatedAt = DateTime.UtcNow.AddHours(5),
-                Status = Domain.Enums.Status.Active
+                Status = Domain.Enums.Status.Active,
+                CategoryId = productDto.CategoryId
             };
 
             await _dbContext.Products.AddAsync(product);
@@ -73,7 +74,8 @@ public class ProductService(AppDbContext dbContext) : IProductService
                 CreatedAt = product.CreatedAt,
                 Count = product.Count,
                 Status = Status.Active,
-                ImagePaths = product.ImagePath
+                ImagePaths = product.ImagePath,
+                CategoryId = product.CategoryId
             });
 
             return results;
@@ -81,6 +83,35 @@ public class ProductService(AppDbContext dbContext) : IProductService
         catch(Exception ex)
         {
             throw new Exception("An error occured while getting products.");
+        }
+    }
+
+    public async Task<IEnumerable<ProductDto>> GetAllByCategoryIdAsync(Guid categoryId)
+    {
+        try
+        {
+            var products = await _dbContext.Products
+                .Where(x => x.CategoryId == categoryId && x.Status == Status.Active)
+                .ToListAsync();
+
+            var resultDtos = products.Select(x => new ProductDto
+            {
+                Id = x.Id,
+                Brand = x.Brand,
+                About = x.About,
+                Price = x.Price,
+                CreatedAt = x.CreatedAt,
+                Count = x.Count,
+                Status = Status.Active,
+                ImagePaths = x.ImagePath,
+                CategoryId = x.CategoryId
+            });
+
+            return resultDtos;
+        }
+        catch(Exception ex)
+        {
+            throw new Exception("An error occured while getting products by category id.");
         }
     }
 

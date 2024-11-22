@@ -20,53 +20,54 @@
 </div>
 
 
-<!--<div class="products">-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="filters">
-                <ul>
-                    <li class="active" data-filter="*">Barcha mahsulotlar</li>
-                    <li class="active" data-filter="*">Noutbuklar</li>
-                    <li class="active" data-filter="*">Personal kompyuterlar</li>
-                    <li class="active" data-filter="*">Extiyot qismlar</li>
-                </ul>
-            </div>
-        </div>
-        @if(!Model.Any())
-        {
+<div class="products">  
+    <div class="container">
+        <div class="row">
             <div class="col-md-12">
-                <p>Hozircha mahsulotlar mavjud emas.</p>
+                <div class="filters">
+                    <ul>
+                        <li><a asp-action="Products" asp-controller="Home" asp-route-id="3a9e6679-7425-41de-911b-e07fc1f90ae4">Getac</a></li>
+                        <li><a asp-action="Products" asp-controller="Home" asp-route-id="6c1e6679-7425-41de-933b-e07fc1f90ae2">Panasonic</a></li>
+                        <li><a asp-action="Products" asp-controller="Home" asp-route-id="7c1e6679-7425-41de-944b-e07fc1f90ae1">Dell</a></li>
+                        <li><a asp-action="Products" asp-controller="Home" asp-route-id="9c1e6679-7425-41de-988b-e07fc1f90ae3">Zebra</a></li>
+                    </ul>
+                </div>
             </div>
-        }
-        else
-        {
-            @foreach(var item in Model)
+            @if(!Model.Any())
             {
                 <div class="col-md-12">
-                    <div class="filters-content">
-                        <div class="row grid">
-                            <div class="col-lg-4 col-md-4 all des">
-                                <div class="product-item">
-                                    <a href="product.html"><img src="@item.ImagePaths?.FirstOrDefault()" alt="@item.Brand"></a>
-                                    <div class="down-content">
-                                        <a href="#"><h4>@item.Brand</h4></a>
-                                        <h6>@item.Price.ToString("C")</h6>
-                                        <p>@item.About</p>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
+                    <p>Hozircha mahsulotlar mavjud emas.</p>
+                </div>
+            }
+            else
+            {
+                @foreach(var item in Model)
+                {
+                    <div class="col-md-12">
+                        <div class="filters-content">
+                            <div class="row grid">
+                                <div class="col-lg-4 col-md-4 all des">
+                                    <div class="product-item">
+                                        <a href="product.html"><img src="@item.ImagePaths?.FirstOrDefault()" alt="@item.Brand"></a>
+                                        <div class="down-content">
+                                            <a href="#"><h4>@item.Brand</h4></a>
+                                            <h6>@item.Price.ToString("C")</h6>
+                                            <p>@item.About</p>
+                                            <ul class="stars">
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
-        }
+        </div>
     </div>
 </div>
