@@ -1,17 +1,13 @@
 ﻿@model ArmedBooks.BBL.Dtos.ProductDto
 @{
     ViewData["Title"] = "Mahsulot";
-    Layout = "_Layout";
 }
 
-<div class="products">
     <div class="container">
         <div class="row">
-            <!-- Описание товара -->
             <section id="product-detail">
                 <div class="container">
                     <div class="product-detail">
-                        <!-- Изображение товара -->
                         <div class="product-images">
                             <img src="@Model.ImagePaths.FirstOrDefault()" alt="@Model.Brand + asosiy rasm" class="main-image">
                             <div class="thumbnails">
@@ -22,7 +18,6 @@
                             </div>
                         </div>
 
-                        <!-- Информация о товаре -->
                         <div class="product-info">
                             <h2>@Model.Brand</h2>
                             <p class="product-category">Noutbuk</p>
@@ -30,15 +25,9 @@
                                 @Model.About
                             </p>
                             <p class="price">Narxi: $<span>@Model.Price.ToString()</span></p>
-
-                            <div class="product-actions">
-                                <button class="btn add-to-cart">Savatga qo'shish</button>
-                                <button class="btn buy-now">Sotib olish</button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
-</div>
