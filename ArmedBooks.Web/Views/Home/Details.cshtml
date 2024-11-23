@@ -31,3 +31,12 @@
             </section>
         </div>
     </div>
+
+<script>
+    document.querySelectorAll('.img-thumbnail').forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            const mainImage = document.querySelector('.img-fluid');
+            mainImage.src = this.src;
+        });
+    });
+</script>
