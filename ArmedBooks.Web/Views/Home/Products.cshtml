@@ -45,7 +45,7 @@
                 {
                     <div class="col-md-4">
                         <div class="product-item">
-                            <a href="#"><img src="@Url.Content("~/" + @product.ImagePaths?.FirstOrDefault())" alt="@product.Brand"></a>
+                            <a href="#"><img src="@Url.Content(@product.ImagePaths?.FirstOrDefault())" alt="@product.Brand"></a>
                             <div class="down-content">
                                 <a href="@Url.Action("Details", "Home", new { id = product.Id })"><h4>@product.Brand</h4></a>
                                 <h6>@product.Price.ToString()</h6>

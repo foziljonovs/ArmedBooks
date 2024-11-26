@@ -17,7 +17,7 @@ namespace ArmedBooks.Web.Controllers
         private readonly IImageService _imageService = imageService;
         private readonly ICategoryService _categoryService = categoryService;
 
-        [HttpGet("/")]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             try
