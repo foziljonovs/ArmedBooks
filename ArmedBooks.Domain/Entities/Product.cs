@@ -9,7 +9,6 @@ public class Product
     public Guid Id { get; set; }
     [Required, MinLength(3)]
     public string Brand { get; set; }
-    [MaxLength(512)]
     public string? About { get; set; }
     [Required]
     public double Price { get; set; }
