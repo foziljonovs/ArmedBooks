@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutArmedbooks" xml:space="preserve">
+    <value>ARMEDBOOKS Hakkında</value>
+  </data>
   <data name="aboutUs" xml:space="preserve">
     <value>Hakkımızda</value>
+  </data>
+  <data name="aCombination" xml:space="preserve">
+    <value>Yüksek kalite ve uygun fiyatların birleşimi</value>
+  </data>
+  <data name="buyNow" xml:space="preserve">
+    <value>Şimdi al</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>İletişim</value>
   </data>
   <data name="control" xml:space="preserve">
     <value>Her ürün sıkı kalite kontrolünden geçer</value>
@@ -129,8 +141,20 @@
   <data name="delivery" xml:space="preserve">
     <value>CIS genelinde hızlı destek ve teslimat</value>
   </data>
+  <data name="discover" xml:space="preserve">
+    <value>Güvenilir ve emniyetli teknolojileri keşfedin!</value>
+  </data>
   <data name="fastDelivery" xml:space="preserve">
     <value>BDT genelinde hızlı teslimat ve destek</value>
+  </data>
+  <data name="hasBeen" xml:space="preserve">
+    <value>ARMEDBOOKS, 2019'dan bu yana BDT'deki askeri-endüstriyel dizüstü bilgisayarların lider tedarikçisidir. Şirketimiz zorlu koşullarda en yüksek stabilite, güvenlik ve performans standartlarını karşılayan güvenilir bilgisayar ekipmanlarının satışında uzmanlaşmıştır. Zorlu çalışma koşullarına dayanabilecek ekipmanlara ihtiyaç duyan askeri, endüstriyel ve kurumsal müşterilere çözümler sunuyoruz. ARMEDBOOKS, BDT genelinde yüksek kaliteli ürünleri, düşük fiyatları, hızlı desteği ve teslimatı garanti ederek müşterilerine her durumda güvenebilecekleri teknolojiyi sunar.</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Ana</value>
+  </data>
+  <data name="inDetal" xml:space="preserve">
+    <value>detaylı olarak</value>
   </data>
   <data name="leading" xml:space="preserve">
     <value>ARMEDBOOKS, 2019'dan beri faaliyet gösteren, BDT'deki askeri-endüstriyel dizüstü bilgisayarların lider tedarikçisidir.</value>
@@ -138,11 +162,23 @@
   <data name="Looking" xml:space="preserve">
     <value>En iyi ürünleri mi arıyorsunuz?</value>
   </data>
+  <data name="OurMission" xml:space="preserve">
+    <value>Misyonumuz</value>
+  </data>
+  <data name="perfect" xml:space="preserve">
+    <value>Zorlu Koşullar için Mükemmel Ürünler</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>ürünler</value>
   </data>
   <data name="reliable" xml:space="preserve">
     <value>Güvenilir ve dayanıklı bilgisayar donanımı</value>
+  </data>
+  <data name="stable" xml:space="preserve">
+    <value>Zorlu koşullara uyarlanmış stabilite ve güvenlik içeren bir teknik</value>
+  </data>
+  <data name="technologies" xml:space="preserve">
+    <value>Yüksek standartları karşılayan ve ekstrem koşullara dayanıklı teknolojiler.</value>
   </data>
   <data name="theBest" xml:space="preserve">
     <value>Hiçbir ekstra maliyet olmadan en iyi çözümler</value>

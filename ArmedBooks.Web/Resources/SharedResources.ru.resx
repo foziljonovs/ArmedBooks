@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutArmedbooks" xml:space="preserve">
+    <value>О ARMEDBOOKS</value>
+  </data>
   <data name="aboutUs" xml:space="preserve">
     <value>о нас</value>
+  </data>
+  <data name="aCombination" xml:space="preserve">
+    <value>Сочетание высокого качества и доступных цен</value>
+  </data>
+  <data name="buyNow" xml:space="preserve">
+    <value>Купить сейчас</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Коммуникация</value>
   </data>
   <data name="control" xml:space="preserve">
     <value>Каждое изделие проходит строгий контроль качества</value>
@@ -129,8 +141,20 @@
   <data name="delivery" xml:space="preserve">
     <value>Быстрая поддержка и доставка по всему СНГ</value>
   </data>
+  <data name="discover" xml:space="preserve">
+    <value>Откройте для себя надежные и безопасные технологии!</value>
+  </data>
   <data name="fastDelivery" xml:space="preserve">
     <value>Быстрая доставка и поддержка по всему СНГ.</value>
+  </data>
+  <data name="hasBeen" xml:space="preserve">
+    <value>ARMEDBOOKS — ведущий поставщик военно-промышленных ноутбуков в СНГ с 2019 года. Наша компания специализируется на продаже надежного компьютерного оборудования, отвечающего самым высоким стандартам стабильности, безопасности и производительности в экстремальных условиях. Мы предоставляем решения для военных, промышленных и корпоративных заказчиков, которым необходимо оборудование, способное выдерживать суровые условия эксплуатации. ARMEDBOOKS гарантирует высокое качество продукции, низкие цены, быструю поддержку и доставку по всему СНГ, предоставляя клиентам технологии, которым можно доверять в любой ситуации.</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Основной</value>
+  </data>
+  <data name="inDetal" xml:space="preserve">
+    <value>подробно</value>
   </data>
   <data name="leading" xml:space="preserve">
     <value>ARMEDBOOKS — ведущий поставщик ноутбуков военно-промышленного назначения на территории СНГ, работающий с 2019 года.</value>
@@ -138,11 +162,23 @@
   <data name="Looking" xml:space="preserve">
     <value>Ищете лучшие продукты?</value>
   </data>
+  <data name="OurMission" xml:space="preserve">
+    <value>Наша миссия</value>
+  </data>
+  <data name="perfect" xml:space="preserve">
+    <value>Идеальные продукты для экстремальных условий</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>продукты</value>
   </data>
   <data name="reliable" xml:space="preserve">
     <value>Надежная и долговечная компьютерная техника</value>
+  </data>
+  <data name="stable" xml:space="preserve">
+    <value>Техника, обладающая стабильностью и безопасностью, адаптированная к экстремальным условиям.</value>
+  </data>
+  <data name="technologies" xml:space="preserve">
+    <value>Технологии, соответствующие высоким стандартам и устойчивые к экстремальным условиям.</value>
   </data>
   <data name="theBest" xml:space="preserve">
     <value>Лучшие решения без дополнительных затрат</value>

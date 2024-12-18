@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutArmedbooks" xml:space="preserve">
+    <value>ARMEDBOOKS haqida</value>
+  </data>
   <data name="aboutUs" xml:space="preserve">
     <value>Biz haqimizda</value>
+  </data>
+  <data name="aCombination" xml:space="preserve">
+    <value>Yuqori sifat va arzon narxlarning kombinatsiyasi</value>
+  </data>
+  <data name="buyNow" xml:space="preserve">
+    <value>Hozir sotib oling</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Aloqa</value>
   </data>
   <data name="control" xml:space="preserve">
     <value>Har bir mahsulot qattiq sifat nazoratidan o'tadi</value>
@@ -129,8 +141,20 @@
   <data name="delivery" xml:space="preserve">
     <value>MDH bo'ylab tezkor qo'llab-quvvatlash va yetkazib berish</value>
   </data>
+  <data name="discover" xml:space="preserve">
+    <value>Ishonchli va xavfsiz texnalogiyalarni kashf eting!</value>
+  </data>
   <data name="fastDelivery" xml:space="preserve">
     <value>MDH bo'ylab tezkor yetkazib berish va qo'llab-quvvatlash</value>
+  </data>
+  <data name="hasBeen" xml:space="preserve">
+    <value>ARMEDBOOKS 2019-yildan buyon MDHda harbiy-sanoat noutbuklarining yetakchi yetkazib beruvchisi hisoblanadi. Kompaniyamiz barqarorlik, xavfsizlik va ekstremal sharoitlarda ishlashning eng yuqori standartlariga javob beradigan ishonchli kompyuter uskunalarini sotishga ixtisoslashgan. Biz og‘ir ish sharoitlariga bardosh bera oladigan uskunalarga muhtoj bo‘lgan harbiy, sanoat va korxona mijozlari uchun echimlarni taqdim etamiz. ARMEDBOOKS yuqori sifatli mahsulotlar, arzon narxlar, MDH bo‘ylab tezkor qo‘llab-quvvatlash va yetkazib berishni kafolatlaydi, mijozlarga har qanday sharoitda ishonishi mumkin bo‘lgan texnologiyalarni taqdim etadi.</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Asosiy</value>
+  </data>
+  <data name="inDetal" xml:space="preserve">
+    <value>Batafsil</value>
   </data>
   <data name="leading" xml:space="preserve">
     <value>ARMEDBOOKS 2019-yildan buyon faoliyat yurituvchi MDHda harbiy-sanoat noutbuklarining yetakchi yetkazib beruvchisi hisoblanadi.</value>
@@ -138,11 +162,23 @@
   <data name="Looking" xml:space="preserve">
     <value>Eng yaxshi mahsulotlarni qidiryapsizmi?</value>
   </data>
+  <data name="OurMission" xml:space="preserve">
+    <value>Bizning missiyamiz</value>
+  </data>
+  <data name="perfect" xml:space="preserve">
+    <value>Ekstremal sharoitlar uchun mukammal mahsulotlar</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Mahsulotlar</value>
   </data>
   <data name="reliable" xml:space="preserve">
     <value>Ishonchli va bardoshli kompyuter uskunalari</value>
+  </data>
+  <data name="stable" xml:space="preserve">
+    <value>Ekstremal sharoitlarga moslashtirilgan barqaror va xavfsiz uskunalar</value>
+  </data>
+  <data name="technologies" xml:space="preserve">
+    <value>Yuqori standartlarga javob beradigan, ekstremal sharoitlarga chidamli texnalogiyalar</value>
   </data>
   <data name="theBest" xml:space="preserve">
     <value>Ortiqcha to'lovlarsiz eng yaxshi echimlar</value>

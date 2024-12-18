@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutArmedbooks" xml:space="preserve">
+    <value>About ARMEDBOOKS</value>
+  </data>
   <data name="aboutUs" xml:space="preserve">
     <value>About Us</value>
+  </data>
+  <data name="aCombination" xml:space="preserve">
+    <value>A combination of high quality and affordable prices</value>
+  </data>
+  <data name="buyNow" xml:space="preserve">
+    <value>Buy now</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
   </data>
   <data name="control" xml:space="preserve">
     <value>Each product undergoes strict quality control</value>
@@ -129,8 +141,20 @@
   <data name="delivery" xml:space="preserve">
     <value>Fast support and delivery throughout the CIS</value>
   </data>
+  <data name="discover" xml:space="preserve">
+    <value>Discover reliable and safe technologies!</value>
+  </data>
   <data name="fastDelivery" xml:space="preserve">
     <value>Fast delivery and support throughout the CIS</value>
+  </data>
+  <data name="hasBeen" xml:space="preserve">
+    <value>ARMEDBOOKS has been a leading supplier of military-industrial laptops in the CIS since 2019. Our company specializes in selling reliable computer equipment that meets the highest standards of stability, security and performance in extreme conditions. We provide solutions for military, industrial and enterprise customers who need equipment that can withstand harsh operating conditions. ARMEDBOOKS guarantees high-quality products, affordable prices, fast support and delivery throughout the CIS, providing customers with technologies they can rely on in any conditions.</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="inDetal" xml:space="preserve">
+    <value>In Detal</value>
   </data>
   <data name="leading" xml:space="preserve">
     <value>ARMEDBOOKS is a leading supplier of military-industrial laptops in the CIS, operating since 2019.</value>
@@ -138,11 +162,23 @@
   <data name="Looking" xml:space="preserve">
     <value>Looking for the best products?</value>
   </data>
+  <data name="OurMission" xml:space="preserve">
+    <value>Our Mission</value>
+  </data>
+  <data name="perfect" xml:space="preserve">
+    <value>Perfect Products For Extreme Conditions</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>
   </data>
   <data name="reliable" xml:space="preserve">
     <value>Reliable and durable computer equipment</value>
+  </data>
+  <data name="stable" xml:space="preserve">
+    <value>Stable and safe equipment adapted to extreme conditions</value>
+  </data>
+  <data name="technologies" xml:space="preserve">
+    <value>Technologies that meet high standards and are resistant to extreme conditions.</value>
   </data>
   <data name="theBest" xml:space="preserve">
     <value>The best solutions without additional costs</value>
